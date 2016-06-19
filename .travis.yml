@@ -1,0 +1,26 @@
+language: python
+python:
+- '2.7'
+- '3.3'
+- '3.4'
+- '3.5'
+- 3.5-dev
+- nightly
+install: make init
+script:
+- python -m unittest discover
+
+# Add the following section if you would like to use travis to deploy your package to PyPI.
+# To encrypt your PyPI password, use the 'travis' CLI tool to execute:
+#   travis encrypt --add <password>
+# Since "tags: true", travis will only deploy to PyPI when you create and push a new git tag.
+
+#deploy:
+#  provider: pypi
+#  user: <pypi username>
+#  password:
+#    secure: <encrypted_password>
+#  on:
+#    tags: true
+#    distributions: sdist bdist_wheel
+#    repo: <git repo name>

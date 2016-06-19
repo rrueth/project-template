@@ -1,0 +1,6 @@
+*.pyc
+.idea
+.tox/
+.vagrant/
+__pycache__/
+env/
